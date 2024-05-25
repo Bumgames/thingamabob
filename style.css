@@ -1,0 +1,102 @@
+/* Basic Reset and Body Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Verdana, sans-serif;
+    background: #0a0a0a; /* Dark background for better rain visibility */
+}
+
+/* Rain Overlay Styling */
+.rain-overlay {
+    position: fixed;
+    top: 0;
+    left: -15vw;
+    width: 300vw;
+    height: 200vh;
+    pointer-events: none; /* Allows clicks and scrolling through the rain */
+    overflow: hidden;
+    z-index: 1000; /* Ensure the rain is above other content */
+}
+
+/* Rain Drop Styling */
+.rain {
+    position: absolute;
+    bottom: 100%;
+    width: 2px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: fall linear infinite;
+    transform: rotate(-15deg); /* Rotate the drops to make them angled */
+}
+
+/* Rain Animation */
+@keyframes fall {
+    to {
+        transform: translateY(130vh) translateX(20vw); /* Adjust the translateX value for the desired angle */
+    }
+}
+
+/* Content Container Styling */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the rain */
+    color: #fff; /* White text for better contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Headings Styling */
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1em;
+    text-align: left;
+    margin: 10px 0;
+}
+
+/* Link Styling */
+a {
+    color: #1e90ff; /* Slightly lighter blue for better readability */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Unordered List Styling */
+ul {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Audio Control Styling */
+audio {
+    display: block;
+    margin: 20px auto;
+}
